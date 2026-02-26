@@ -1,4 +1,5 @@
 import { Shield, Sparkles, Smartphone, Timer } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -10,6 +11,7 @@ const playStoreUrl = "https://play.google.com/store/apps/details?id=com.susbeerg
 const newsletterUrl = "https://cartastrofe.com/newsletter";
 const privacyUrl = "/privacidad";
 const termsUrl = "/terminos";
+const heroHeaderImageUrl = "/images/cartastrofe_logo_landing.png";
 
 const howToPlay = [
   {
@@ -86,6 +88,16 @@ export default function Home() {
     <main className="min-h-screen">
       <section className="container py-20 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
+          <div className="mb-8 overflow-hidden rounded-3xl border bg-card shadow-2xl">
+            <Image
+              src={heroHeaderImageUrl}
+              alt="Cartástrofe - juego de cartas para parejas"
+              width={1408}
+              height={1024}
+              priority
+              className="h-auto w-full"
+            />
+          </div>
           <Badge className="mb-5" variant="secondary">
             Juego para parejas · Android
           </Badge>
