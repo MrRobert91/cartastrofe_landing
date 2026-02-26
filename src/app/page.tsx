@@ -1,4 +1,5 @@
 import { Shield, Sparkles, Smartphone, Timer } from "lucide-react";
+import Link from "next/link";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
@@ -7,8 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const playStoreUrl = "https://play.google.com/store/apps/details?id=com.susbeerginman.cartastrofe";
 const newsletterUrl = "https://cartastrofe.com/newsletter";
-const privacyUrl = "https://cartastrofe.com/privacidad";
-const termsUrl = "https://cartastrofe.com/terminos";
+const privacyUrl = "/privacidad";
+const termsUrl = "/terminos";
 
 const howToPlay = [
   {
@@ -230,7 +231,11 @@ export default function Home() {
             ))}
           </Accordion>
           <p className="mt-4 text-sm text-muted-foreground">
-            No recogemos datos. Si quieres ver más detalles, puedes leer nuestra política de privacidad.
+            No recogemos datos. Si quieres ver más detalles, puedes leer nuestra{" "}
+            <Link href={privacyUrl} className="underline hover:text-foreground">
+              política de privacidad
+            </Link>
+            .
           </p>
         </div>
       </section>
@@ -247,12 +252,12 @@ export default function Home() {
               <a href={newsletterUrl} target="_blank" rel="noreferrer" className="hover:text-foreground">
                 Lista de correo
               </a>
-              <a href={privacyUrl} target="_blank" rel="noreferrer" className="hover:text-foreground">
+              <Link href={privacyUrl} className="hover:text-foreground">
                 Política de privacidad
-              </a>
-              <a href={termsUrl} target="_blank" rel="noreferrer" className="hover:text-foreground">
+              </Link>
+              <Link href={termsUrl} className="hover:text-foreground">
                 Términos de uso
-              </a>
+              </Link>
             </div>
             <p>© 2026 Cartástrofe. Todos los derechos reservados.</p>
           </div>
@@ -280,3 +285,4 @@ export default function Home() {
     </main>
   );
 }
+
