@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold">1. Introducción</h2>
           <p>
-            Bienvenido/a a <strong>Cartástrofe</strong> ("la Aplicación"), desarrollada por Susbeer y RustyRoboz ("nosotros", "nuestro"). Esta Política de Privacidad describe cómo tratamos la información cuando utilizas nuestra aplicación móvil.
+            Bienvenido/a a <strong>Cartástrofe</strong> (&ldquo;la Aplicación&rdquo;), desarrollada por Susbeer y RustyRoboz (&ldquo;nosotros&rdquo;, &ldquo;nuestro&rdquo;). Esta Política de Privacidad describe cómo tratamos la información cuando utilizas nuestra aplicación móvil.
           </p>
           <p>
             Nos tomamos tu privacidad muy en serio. De hecho, esta puede ser la política de privacidad más corta que hayas leído, porque <strong>no recogemos prácticamente ningún dato tuyo</strong>.

@@ -157,7 +157,7 @@ export default function Home() {
           <div className="mt-7 grid gap-3">
             {exampleCards.map((example) => (
               <Card key={example}>
-                <CardContent className="pt-6 text-sm text-muted-foreground md:text-base">“{example.replace(/^\S+\s/, "")}"</CardContent>
+                <CardContent className="pt-6 text-sm text-muted-foreground md:text-base">“{example.replace(/^\S+\s/, "")}”</CardContent>
               </Card>
             ))}
           </div>

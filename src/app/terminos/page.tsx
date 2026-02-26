@@ -18,7 +18,7 @@ export default function TermsPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold">1. Aceptación de los Términos</h2>
           <p>
-            Al descargar, instalar o utilizar la aplicación <strong>Cartástrofe</strong> ("la Aplicación"), aceptas quedar vinculado por estos Términos de Uso ("Términos"). Si no estás de acuerdo con alguno de estos Términos, no debes utilizar la Aplicación.
+            Al descargar, instalar o utilizar la aplicación <strong>Cartástrofe</strong> (&ldquo;la Aplicación&rdquo;), aceptas quedar vinculado por estos Términos de Uso (&ldquo;Términos&rdquo;). Si no estás de acuerdo con alguno de estos Términos, no debes utilizar la Aplicación.
           </p>
         </section>
 
@@ -61,7 +61,7 @@ export default function TermsPage() {
           </div>
           <div className="space-y-2">
             <h3 className="text-lg font-semibold">5.2. Marca</h3>
-            <p>"Cartástrofe", su logotipo y elementos visuales asociados son marcas de sus creadores. No está permitido el uso de estas marcas sin autorización previa por escrito.</p>
+            <p>&ldquo;Cartástrofe&rdquo;, su logotipo y elementos visuales asociados son marcas de sus creadores. No está permitido el uso de estas marcas sin autorización previa por escrito.</p>
           </div>
           <div className="space-y-2">
             <h3 className="text-lg font-semibold">5.3. Restricciones</h3>
@@ -78,7 +78,7 @@ export default function TermsPage() {
           <h2 className="text-xl font-bold">6. Disponibilidad y funcionamiento</h2>
           <div className="space-y-2">
             <h3 className="text-lg font-semibold">6.1. Disponibilidad</h3>
-            <p>La Aplicación se ofrece "tal cual" y "según disponibilidad". No garantizamos que la Aplicación esté disponible de forma ininterrumpida, libre de errores o compatible con todos los dispositivos Android.</p>
+            <p>La Aplicación se ofrece &ldquo;tal cual&rdquo; y &ldquo;según disponibilidad&rdquo;. No garantizamos que la Aplicación esté disponible de forma ininterrumpida, libre de errores o compatible con todos los dispositivos Android.</p>
           </div>
           <div className="space-y-2">
             <h3 className="text-lg font-semibold">6.2. Actualizaciones</h3>
