@@ -133,7 +133,7 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-bold">10. Contacto</h2>
           <p>Si tienes alguna pregunta o inquietud sobre esta Política de Privacidad, puedes ponerte en contacto con nosotros en:</p>
           <p className="text-muted-foreground">
-            📧 Email: privacidad@cartastrofe.com
+            📧 Email: info@cartastrofe.com
             <br />
             🌐 Web: https://cartastrofe.com
           </p>
