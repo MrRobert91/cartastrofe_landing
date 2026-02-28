@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 type CardExample = {
   image: string;
   alt: string;
-  quote: string;
 };
 
 type CardsShowcaseProps = {
@@ -15,6 +14,11 @@ type CardsShowcaseProps = {
 
 export function CardsShowcase({ cards }: CardsShowcaseProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const showNextCard = () => {
+    if (cards.length < 2) return;
+    setActiveIndex((prev) => (prev + 1) % cards.length);
+  };
 
   useEffect(() => {
     if (cards.length < 2) return;
@@ -33,12 +37,15 @@ export function CardsShowcase({ cards }: CardsShowcaseProps) {
   const activeCard = cards[activeIndex];
 
   return (
-    <div className="space-y-4">
-      <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border bg-background shadow-sm">
-        <Image src={activeCard.image} alt={activeCard.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 420px" />
-      </div>
-
-      <p className="rounded-xl border bg-background p-4 text-sm text-muted-foreground md:text-base">“{activeCard.quote}”</p>
+    <div className="mx-auto w-full max-w-[315px] space-y-4">
+      <button
+        type="button"
+        onClick={showNextCard}
+        className="relative block aspect-[3/4] w-full overflow-hidden rounded-2xl border bg-background shadow-sm"
+        aria-label="Pasar a la siguiente carta"
+      >
+        <Image src={activeCard.image} alt={activeCard.alt} fill className="object-cover" sizes="(max-width: 768px) min(100vw, 315px), 315px" />
+      </button>
 
       <div className="flex flex-wrap gap-2">
         {cards.map((card, index) => (
