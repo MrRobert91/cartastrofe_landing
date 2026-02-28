@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const playStoreUrl = "https://play.google.com/store/apps/details?id=com.susbeerginman.cartastrofe";
@@ -106,11 +105,8 @@ export default function Home() {
             <strong>Cartástrofe</strong> es el juego de cartas para parejas que convierte cualquier momento en una aventura impredecible. Sin cartas físicas. Sin excusas. Solo tu móvil y muchas ganas de liarla.
           </p>
           <p className="mt-4 font-semibold text-primary">Gratis en Android.</p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button size="lg" className="min-w-72 text-base" disabled>
-              🎴 PRÓXIMAMENTE EN PLAY STORE
-            </Button>
-            <div className="min-w-72 rounded-md border border-input bg-background px-4 py-3 text-left text-sm text-muted-foreground">
+          <div className="mt-8 flex justify-center">
+            <div className="w-full max-w-md rounded-md border border-input bg-background px-4 py-3 text-left text-sm text-muted-foreground">
               <div className="ml-embedded" data-form="7SWYmQ" />
             </div>
           </div>
@@ -181,11 +177,7 @@ export default function Home() {
               Cartástrofe es <strong>gratis</strong>, <strong>sin anuncios</strong>, <strong>sin registro</strong> y <strong>exclusiva para Android</strong>. Descárgala, abrid una baraja y a ver quién sobrevive a las 24 horas.
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <Button size="lg" className="w-full text-base sm:w-auto" disabled>
-              🎴 PRÓXIMAMENTE EN PLAY STORE
-            </Button>
-          </CardContent>
+          <CardContent />
         </Card>
       </section>
 
@@ -267,12 +259,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      <div aria-hidden="true" className="pointer-events-none fixed inset-x-0 bottom-0 z-20 border-t bg-background/80 p-3 backdrop-blur sm:hidden">
-        <Button className="w-full" disabled>
-          🎴 PRÓXIMAMENTE EN PLAY STORE
-        </Button>
-      </div>
 
       <div className="fixed right-6 top-6 hidden items-center gap-2 rounded-full border bg-background/80 px-3 py-2 text-xs text-muted-foreground backdrop-blur md:flex">
         <Smartphone className="h-3.5 w-3.5" />
