@@ -60,3 +60,18 @@
       radial-gradient(circle at 80% 0%, hsl(var(--accent) / 0.1), transparent 30%);
   }
 }
+
+.ml-compact .ml-embedded h1,
+.ml-compact .ml-embedded h2,
+.ml-compact .ml-embedded h3,
+.ml-compact .ml-embedded h4,
+.ml-compact .ml-embedded h5,
+.ml-compact .ml-embedded h6 {
+  line-height: 1.1 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.ml-compact .ml-embedded p {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.25 !important;
+}
