@@ -106,7 +106,7 @@ export default function Home() {
           </p>
           <p className="mt-4 font-semibold text-primary">Gratis en Android.</p>
           <div className="mt-8 flex justify-center">
-            <div className="w-full max-w-md rounded-md border border-input bg-background px-4 py-3 text-left text-sm text-muted-foreground">
+            <div className="w-full max-w-md rounded-md border border-input bg-background px-4 py-3 text-left">
               <div className="ml-embedded" data-form="7SWYmQ" />
             </div>
           </div>
