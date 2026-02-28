@@ -107,16 +107,12 @@ export default function Home() {
           </p>
           <p className="mt-4 font-semibold text-primary">Gratis en Android.</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg" className="min-w-72 text-base">
-              <a href={playStoreUrl} target="_blank" rel="noreferrer">
-                🎴 DESCARGAR GRATIS EN GOOGLE PLAY
-              </a>
+            <Button size="lg" className="min-w-72 text-base" disabled>
+              🎴 PRÓXIMAMENTE EN PLAY STORE
             </Button>
-            <Button asChild size="lg" variant="outline" className="min-w-72 text-base">
-              <a href={newsletterUrl} target="_blank" rel="noreferrer">
-                📧 SUSCRIBIRME A LA LISTA
-              </a>
-            </Button>
+            <div className="min-w-72 rounded-md border border-input bg-background px-4 py-3 text-left text-sm text-muted-foreground">
+              <div className="ml-embedded" data-form="7SWYmQ" />
+            </div>
           </div>
         </div>
       </section>
@@ -186,10 +182,8 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild size="lg" className="w-full text-base sm:w-auto">
-              <a href={playStoreUrl} target="_blank" rel="noreferrer">
-                🎴 DESCARGAR GRATIS EN GOOGLE PLAY
-              </a>
+            <Button size="lg" className="w-full text-base sm:w-auto" disabled>
+              🎴 PRÓXIMAMENTE EN PLAY STORE
             </Button>
           </CardContent>
         </Card>
@@ -222,11 +216,9 @@ export default function Home() {
             </Card>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">¿Lo peor que puede pasar? Que tu bandeja de entrada sea un poco más divertida.</p>
-          <Button asChild size="lg" variant="secondary" className="mt-6 w-full sm:w-auto">
-            <a href={newsletterUrl} target="_blank" rel="noreferrer">
-              📧 SUSCRIBIRME A LA LISTA
-            </a>
-          </Button>
+          <div className="mt-6">
+            <div className="ml-embedded" data-form="7SWYmQ" />
+          </div>
           <p className="mt-4 text-sm text-muted-foreground">Tu email está más seguro con nosotros que una carta de escudo en tu baraja. 🛡️</p>
         </div>
       </section>
@@ -277,10 +269,8 @@ export default function Home() {
       </footer>
 
       <div aria-hidden="true" className="pointer-events-none fixed inset-x-0 bottom-0 z-20 border-t bg-background/80 p-3 backdrop-blur sm:hidden">
-        <Button asChild className="w-full">
-          <a href={playStoreUrl} target="_blank" rel="noreferrer">
-            🎴 DESCARGAR GRATIS
-          </a>
+        <Button className="w-full" disabled>
+          🎴 PRÓXIMAMENTE EN PLAY STORE
         </Button>
       </div>
 
