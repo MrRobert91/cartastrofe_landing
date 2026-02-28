@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { CardsShowcase } from "@/components/cards-showcase";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const playStoreUrl = "https://play.google.com/store/apps/details?id=com.susbeerginman.cartastrofe";
@@ -47,12 +48,27 @@ const reasons = [
   ["🎲 40 cartas posibles", "Cada baraja de 12 es diferente. Matemáticamente tienes más de 5 mil millones de combinaciones."],
 ];
 
-const exampleCards = [
-  "🗣️ Tu pareja tiene que decirte tres cosas que le vuelven loco/a de ti. En público.",
-  "🧹 Le toca prepararte el desayuno mañana. Sin protestar.",
-  "🛡️ ¡Escudo! Anula la última carta que te jugaron.",
-  "🔀 Intercambia una carta usada con tu pareja. Sí, esa que no querías.",
-  "🎭 Imita a tu pareja durante los próximos 5 minutos. A ver si se ríe o se enfada.",
+const realCardExamples = [
+  {
+    image: "/images/cartas/1.png",
+    alt: "Carta de acción de Cartástrofe",
+    quote: "Tu pareja tiene que decirte tres cosas que le vuelven loco/a de ti. En público.",
+  },
+  {
+    image: "/images/cartas/2.png",
+    alt: "Carta de tarea de Cartástrofe",
+    quote: "Le toca prepararte el desayuno mañana. Sin protestar.",
+  },
+  {
+    image: "/images/cartas/3.png",
+    alt: "Carta de defensa de Cartástrofe",
+    quote: "¡Escudo! Anula la última carta que te jugaron.",
+  },
+  {
+    image: "/images/cartas/4.png",
+    alt: "Carta sorpresa de Cartástrofe",
+    quote: "Intercambia una carta usada con tu pareja. Sí, esa que no querías.",
+  },
 ];
 
 const faqs = [
@@ -158,14 +174,26 @@ export default function Home() {
       <section className="container pb-20">
         <div className="mx-auto max-w-5xl rounded-3xl border bg-secondary/30 p-6 md:p-10">
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Un vistazo a lo que os espera... 👀</h2>
-          <div className="mt-7 grid gap-3">
-            {exampleCards.map((example) => (
-              <Card key={example}>
-                <CardContent className="pt-6 text-sm text-muted-foreground md:text-base">“{example.replace(/^\S+\s/, "")}”</CardContent>
+          <div className="mt-7 grid gap-6 md:grid-cols-[minmax(0,420px)_1fr] md:items-start">
+            <CardsShowcase cards={realCardExamples} />
+
+            <div className="space-y-3">
+              <Card>
+                <CardContent className="pt-6 text-sm text-muted-foreground md:text-base">🗣️ Tu pareja tiene que decirte tres cosas que le vuelven loco/a de ti. En público.</CardContent>
               </Card>
-            ))}
+              <Card>
+                <CardContent className="pt-6 text-sm text-muted-foreground md:text-base">🧹 Le toca prepararte el desayuno mañana. Sin protestar.</CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6 text-sm text-muted-foreground md:text-base">🛡️ ¡Escudo! Anula la última carta que te jugaron.</CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6 text-sm text-muted-foreground md:text-base">🔀 Intercambia una carta usada con tu pareja. Sí, esa que no querías.</CardContent>
+              </Card>
+            </div>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground">Y hay 35 más esperándote...</p>
+          <p className="mt-5 text-sm text-muted-foreground">Sube tus imágenes reales en /public/images/cartas con nombres 1.png, 2.png, 3.png y 4.png.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Y hay 35 más esperándote...</p>
         </div>
       </section>
 
