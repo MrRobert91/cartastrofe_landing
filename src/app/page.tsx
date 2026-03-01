@@ -48,24 +48,10 @@ const reasons = [
   ["🎲 40 cartas posibles", "Cada baraja de 12 es diferente. Matemáticamente tienes más de 5 mil millones de combinaciones."],
 ];
 
-const realCardExamples = [
-  {
-    image: "/images/cartas/1.png",
-    alt: "Carta de acción de Cartástrofe",
-  },
-  {
-    image: "/images/cartas/2.png",
-    alt: "Carta de tarea de Cartástrofe",
-  },
-  {
-    image: "/images/cartas/3.png",
-    alt: "Carta de defensa de Cartástrofe",
-  },
-  {
-    image: "/images/cartas/4.png",
-    alt: "Carta sorpresa de Cartástrofe",
-  },
-];
+const realCardExamples = Array.from({ length: 40 }, (_, index) => ({
+  image: `/images/cartas/${index + 1}.png`,
+  alt: `Carta ${index + 1} de Cartástrofe`,
+}));
 
 const faqs = [
   {
@@ -173,8 +159,6 @@ export default function Home() {
           <div className="mt-7">
             <CardsShowcase cards={realCardExamples} />
           </div>
-          <p className="mt-5 text-sm text-muted-foreground">Sube tus imágenes reales en /public/images/cartas con nombres 1.png, 2.png, 3.png y 4.png.</p>
-          <p className="mt-2 text-sm text-muted-foreground">Y hay 35 más esperándote...</p>
         </div>
       </section>
 
