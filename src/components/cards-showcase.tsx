@@ -25,7 +25,7 @@ export function CardsShowcase({ cards }: CardsShowcaseProps) {
 
     const interval = window.setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % cards.length);
-    }, 3500);
+    }, 7000);
 
     return () => window.clearInterval(interval);
   }, [cards.length]);
